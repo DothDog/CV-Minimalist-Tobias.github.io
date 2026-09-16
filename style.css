@@ -155,30 +155,67 @@ body {
 
 .works-nav {
     display: flex;
-    gap: 20px;
-
-    padding: 20px 0;
     border-bottom: 1px solid #111;
 }
 
 .works-nav button {
+    position: relative;
+
+    background: transparent;
     border: none;
-    background: none;
-    padding: 0;
+    border-right: 1px solid #111;
 
-    font-family: inherit;
+    padding: 18px 15px 18px 30px;
+
+    font-family: monospace;
     font-size: 12px;
-    color: #111;
+    text-align: left;
 
+    color: #111;
     cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease;
 }
+
+.works-nav button:last-child {
+    border-right: none;
+}
+
+
+/* CÍRCULO VACÍO */
+
+.works-nav button::before {
+    content: "○";
+
+    position: absolute;
+    left: 10px;
+    top: 17px;
+
+    font-size: 12px;
+
+    transition: transform 0.2s ease;
+}
+
+
+/* SELECCIONADO */
+
+.works-nav button.activo::before {
+    content: "●";
+}
+
+
+/* HOVER */
 
 .works-nav button:hover {
-    text-decoration: underline;
+    background: #111;
+    color: #f2f2f0;
 }
 
-.works-nav button.activo {
-    text-decoration: underline;
+.works-nav button:hover::before {
+    content: "●";
+    transform: scale(1.1);
 }
 
 
