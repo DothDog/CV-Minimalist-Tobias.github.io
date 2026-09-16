@@ -10,7 +10,9 @@
     align-items: center;
     height: 100vh;
 }
-
+.oculto {
+    display: none;
+}
 .pinwheel {
     width: 200px;
     height: 200px;
@@ -23,7 +25,10 @@
 
     animation: slow-down 3s ease-out forwards;
 }
-
+.character {
+    width: 20px;
+    height: 20px;
+}
 .pinwheel:hover .wings {
     animation: spin 1s linear infinite;
 }
