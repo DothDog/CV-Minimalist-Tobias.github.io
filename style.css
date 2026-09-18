@@ -404,41 +404,260 @@ footer a:hover {
     color: #F15A22FF;
 }
 /* MOBILE */
-
 @media (max-width: 700px) {
 
-    .about-layout {
-        grid-template-columns: 1fr;
+    /* =========================
+    PÁGINA
+       ========================= */
+
+    body {
+        min-height: 100vh;
+        height: auto;
+
+        display: flex;
+        flex-direction: column;
     }
 
-    .about-layout .pinwheel {
-        width: 60%;
-        margin: 0 auto;
-    }
     .page {
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
+
+        width: 100%;
+        min-height: 0;
     }
 
-    .visual {
-        min-height: 50vh;
-        border-right: none;
+
+    /* =========================
+    HEADER
+       ========================= */
+
+    .header {
+        height: 45px;
+
+        flex-shrink: 0;
+
+        display: flex;
+        align-items: center;
+
         border-bottom: 1px solid #111;
     }
 
-    .pinwheel {
-        width: 55%;
+    .header-left {
+        padding: 10px;
     }
+
+    .header-right {
+        padding: 10px;
+    }
+
+    .name,
+    .year {
+        font-size: 16px;
+    }
+
+    .header-center {
+        flex: 1;
+        min-width: 0;
+        height: 35px;
+
+        padding: 0;
+
+        overflow: hidden;
+    }
+
+    .header-center span {
+        top: 10px;
+        left: 50%;
+
+        transform: translateX(-50%);
+
+        font-size: 10px;
+        white-space: nowrap;
+    }
+
+
+    /* =========================
+    BLOQUE VISUAL
+       ========================= */
+
+    .visual {
+        width: 100%;
+        height: 320px;
+        min-height: 320px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        position: relative;
+
+        border-bottom: 1px solid #111;
+    }
+
+    .visual::after {
+        display: none;
+    }
+
+    .pinwheel-container {
+        width: 100%;
+        height: 100%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .pinwheel {
+        width: 230px;
+        height: 230px;
+
+        max-width: none;
+    }
+
+
+    /* =========================
+    PERSONAJE
+       ========================= */
+
+    .character-container {
+        width: 100%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .Character {
+        width: 85%;
+        max-width: 350px;
+        height: auto;
+    }
+
+
+    /* =========================
+    CONTENIDO
+       ========================= */
 
     .content {
-        padding: 20px;
+        width: 100%;
+        padding: 0;
     }
+
+
+    /* =========================
+    NAVEGACIÓN
+       ========================= */
 
     .works-nav {
-        gap: 15px;
-        flex-wrap: wrap;
+        width: 100%;
+
+        display: flex;
+        flex-wrap: nowrap;
+
+        border-bottom: 1px solid #111;
     }
 
+    .works-nav button {
+        flex: 1;
+
+        min-width: 0;
+
+        padding: 16px 8px 16px 25px;
+
+        font-size: 10px;
+
+        white-space: nowrap;
+
+        border-right: 1px solid #111;
+    }
+
+    .works-nav button::before {
+        left: 8px;
+        top: 15px;
+        font-size: 9px;
+    }
+
+
+    /* =========================
+    WORK
+       ========================= */
+
     .works-content {
-        padding-top: 30px;
+        padding: 0;
+    }
+
+    .work {
+        display: none;
+    }
+
+    .work.activo {
+        display: block;
+
+        padding: 30px 20px 40px;
+    }
+
+    .work-number {
+        font-size: 15px;
+
+        margin-bottom: 25px;
+    }
+
+    .work h1 {
+        font-size: clamp(42px, 13vw, 65px);
+
+        font-weight: normal;
+
+        line-height: 0.9;
+
+        margin-bottom: 30px;
+    }
+
+    .work p {
+        width: 100%;
+        max-width: 400px;
+
+        font-size: 13px;
+
+        line-height: 1.5;
+    }
+
+
+    /* =========================
+    FOOTER
+       ========================= */
+
+    footer {
+        width: 100%;
+        height: 40px;
+
+        flex-shrink: 0;
+
+        border-top: 1px solid #111;
+    }
+
+    footer > div {
+        margin: 0;
+        padding: 10px;
+    }
+
+    footer .pinwheel-container {
+        width: auto;
+        height: 40px;
+    }
+
+    footer .pinwheel {
+        width: 30px;
+        height: 30px;
+    }
+
+    .contacto {
+        gap: 6px;
+
+        font-size: 10px;
+    }
+
+    .whatsapp {
+        width: 16px;
+        height: 16px;
     }
 }
