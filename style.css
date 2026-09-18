@@ -362,6 +362,47 @@ footer .pinwheel {
     height: 40px;
     display: block;
 }
+footer a {
+    color: #111;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+footer a:hover {
+    color: #F15A22FF;
+}
+
+.contacto {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.whatsapp {
+    width: 18px;
+    height: 18px;
+    color: #111;
+    display: flex;
+    transition: color 0.2s ease;
+}
+
+.whatsapp svg {
+    width: 100%;
+    height: 100%;
+}
+
+.whatsapp:hover {
+    color: #F15A22FF;
+}
+
+.email {
+    color: inherit;
+    text-decoration: none;
+}
+
+.email:hover {
+    color: #F15A22FF;
+}
 /* MOBILE */
 
 @media (max-width: 700px) {
