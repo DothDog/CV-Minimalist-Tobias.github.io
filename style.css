@@ -312,6 +312,7 @@ body {
 
 /* TEXTO */
 
+
 .work-number {
     font-size: 20px;
     margin-bottom: 30px;
@@ -577,7 +578,16 @@ footer a:hover {
     
         border-right: 1px solid #111;
     }
-    
+
+    .works-nav button.Grande {
+        font-size: 9px;
+        white-space: wrap;
+    }
+    .works-nav button.FuckingMolesto {
+        font-size: 8px;
+        white-space: wrap;
+    }
+
     .works-nav button::before {
         left: 6px;
         top: 13px;
