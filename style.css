@@ -335,7 +335,14 @@ body {
     line-height: 0.95;
     margin-bottom: 30px;
 }
+.work h2 a {
+    color: #111;
+    
+}
 
+.work h2 a:hover {
+    color: #F15A22;
+}
 .work p {
     max-width: 450px;
     font-size: 14px;
