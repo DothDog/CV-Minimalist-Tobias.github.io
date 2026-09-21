@@ -36,6 +36,17 @@ body {
 .about-text h1 {
     margin-bottom: 30px;
 }
+
+.about-text a {
+    color: #111;
+    text-decoration: none;
+    border: none;
+    transition: color 0.2s ease;
+}
+
+.about-text a:hover {
+    color: #F15A22;
+}
 /* CONTENEDOR PRINCIPAL */
 
 .page {
