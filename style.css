@@ -431,6 +431,8 @@ footer a:hover {
     /*PÁGINA*/
 
     body {
+        zoom: 0.75;
+        
         min-height: 100vh;
         height: auto;
 
